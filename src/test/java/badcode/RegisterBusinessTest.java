@@ -20,58 +20,6 @@ class RegisterBusinessTest {
         assertEquals(1, actual);
     }
 
-    @Test
-    @DisplayName("test register success with experience 1 year.")
-    public void testRegisterSuccessWithExperienceOneYear() {
-        RegisterBusiness registerBusiness = new RegisterBusiness();
-        Speaker speaker = new Speaker();
-        speaker.setFirstName("mooham");
-        speaker.setLastName("krub");
-        speaker.setEmail("mooham.krub@live.com");
-        speaker.setExp(1);
-        registerBusiness.register(new MockSpeakerRepository(), speaker);
-        assertEquals(500, speaker.getRegistrationFee());
-    }
-
-    @Test
-    @DisplayName("test register success with experience 3 year.")
-    public void testRegisterSuccessWithExperienceThreeYear() {
-        RegisterBusiness registerBusiness = new RegisterBusiness();
-        Speaker speaker = new Speaker();
-        speaker.setFirstName("mooham");
-        speaker.setLastName("krub");
-        speaker.setEmail("mooham.krub@live.com");
-        speaker.setExp(3);
-        registerBusiness.register(new MockSpeakerRepository(), speaker);
-        assertEquals(250, speaker.getRegistrationFee());
-    }
-
-    @Test
-    @DisplayName("test register success with experience 5 year.")
-    public void testRegisterSuccessWithExperienceFiveYear() {
-        RegisterBusiness registerBusiness = new RegisterBusiness();
-        Speaker speaker = new Speaker();
-        speaker.setFirstName("mooham");
-        speaker.setLastName("krub");
-        speaker.setEmail("mooham.krub@live.com");
-        speaker.setExp(5);
-        registerBusiness.register(new MockSpeakerRepository(), speaker);
-        assertEquals(100, speaker.getRegistrationFee());
-    }
-
-    @Test
-    @DisplayName("test register success with experience 9 year.")
-    public void testRegisterSuccessWithExperienceNineYear() {
-        RegisterBusiness registerBusiness = new RegisterBusiness();
-        Speaker speaker = new Speaker();
-        speaker.setFirstName("mooham");
-        speaker.setLastName("krub");
-        speaker.setEmail("mooham.krub@live.com");
-        speaker.setExp(9);
-        registerBusiness.register(new MockSpeakerRepository(), speaker);
-        assertEquals(50, speaker.getRegistrationFee());
-    }
-
     //fail
     @Test
     @DisplayName("test register with out speaker first name")
