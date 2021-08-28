@@ -29,7 +29,7 @@ class RegisterBusinessTest {
         speaker.setLastName("krub");
         speaker.setEmail("mooham.krub@live.com");
         speaker.setExp(1);
-        int actual = registerBusiness.register(new MockSpeakerRepository(), speaker);
+        registerBusiness.register(new MockSpeakerRepository(), speaker);
         assertEquals(500, speaker.getRegistrationFee());
     }
 
@@ -42,7 +42,7 @@ class RegisterBusinessTest {
         speaker.setLastName("krub");
         speaker.setEmail("mooham.krub@live.com");
         speaker.setExp(3);
-        int actual = registerBusiness.register(new MockSpeakerRepository(), speaker);
+        registerBusiness.register(new MockSpeakerRepository(), speaker);
         assertEquals(250, speaker.getRegistrationFee());
     }
 
@@ -55,7 +55,7 @@ class RegisterBusinessTest {
         speaker.setLastName("krub");
         speaker.setEmail("mooham.krub@live.com");
         speaker.setExp(5);
-        int actual = registerBusiness.register(new MockSpeakerRepository(), speaker);
+        registerBusiness.register(new MockSpeakerRepository(), speaker);
         assertEquals(100, speaker.getRegistrationFee());
     }
 
@@ -68,7 +68,7 @@ class RegisterBusinessTest {
         speaker.setLastName("krub");
         speaker.setEmail("mooham.krub@live.com");
         speaker.setExp(9);
-        int actual = registerBusiness.register(new MockSpeakerRepository(), speaker);
+        registerBusiness.register(new MockSpeakerRepository(), speaker);
         assertEquals(50, speaker.getRegistrationFee());
     }
 
